@@ -35,13 +35,16 @@ const nextArrowEl = document.querySelector(".arrow-next")
 
 nextArrowEl.addEventListener('click', function (){
     //togliere la classe active dalla slide attiva
-		const slideActive = slideElements[currentIndex]
-    	slideActive.classList.remove('active')
-
-		let nextSlide = slideElements[++currentIndex]
-		nextSlide.classList.add('active')
-	  
+	const slideActive = slideElements[currentIndex]
+	slideActive.classList.remove('active')	
 	
+	currentIndex++
+	if (currentIndex > slideElements.length-1){
+		currentIndex = 0
+	}
+	
+	let nextSlide = slideElements[currentIndex]
+	nextSlide.classList.add('active')
 
 })
 
@@ -51,11 +54,13 @@ prevArrowEl.addEventListener('click', function (){
     //togliere la classe active dalla slide attiva
     const slideActive = slideElements[currentIndex]
     slideActive.classList.remove('active')
-
-    const nextSlide = slideElements[currentIndex - 1]
+    currentIndex--
+	if(currentIndex < 0){
+		currentIndex = slideElements.length-1
+	}
+    const nextSlide = slideElements[currentIndex]
     nextSlide.classList.add('active')
 
-    currentIndex--  
-
 })
+
 
