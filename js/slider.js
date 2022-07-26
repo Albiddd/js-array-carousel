@@ -37,7 +37,7 @@ nextArrowEl.addEventListener('click', function (){
     //togliere la classe active dalla slide attiva
 		const slideActive = slideElements[currentIndex]
     	slideActive.classList.remove('active')
-		
+
 		let nextSlide = slideElements[++currentIndex]
 		nextSlide.classList.add('active')
 	  
@@ -55,7 +55,7 @@ prevArrowEl.addEventListener('click', function (){
     const nextSlide = slideElements[currentIndex - 1]
     nextSlide.classList.add('active')
 
-    currentIndex--   //aggiungere la classe active alla slide successiva (se esiste)
+    currentIndex--  
 
 })
 

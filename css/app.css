@@ -9,12 +9,13 @@ ul {
 }
 
 .container {
-	max-width: 900px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 
 .slider {
 	position: relative;
+	margin-top: 200px;
 }
 
 .slide {
@@ -36,12 +37,38 @@ ul {
 .arrows {
 	display: flex;
 	justify-content: space-between;
-	padding: 0 20px;
+	
 	font-size: 1.75rem;
 	position: absolute;
 	top: 50%;
 	left: 0;
 	right: 0;
 	transform: translateY(-50%);
-	color: tomato;
+	color: white;
+}
+
+.arrow-prev, .arrow-next{
+	cursor: pointer;
+	padding: 14px;
+	transition: 0.6s ease;
+}
+
+.arrow-prev{
+	border-radius: 0 5px 5px 0;
+}
+.arrow-next{
+	border-radius: 5px 0  0 5px;
+}
+.arrow-prev:hover, .arrow-next:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+
+li {
+	animation-name: fade;
+	animation-duration: 1s;
+}
+
+@keyframes fade {
+	from {opacity: .7}
+	to {opacity: 1}
 }
