@@ -31,6 +31,7 @@ for(let i = 0; i< slides.length; i++){
 	slideElements.push(li)
 }
 
+
 const nextArrowEl = document.querySelector(".arrow-next")
 
 nextArrowEl.addEventListener('click', function (){
@@ -63,4 +64,49 @@ prevArrowEl.addEventListener('click', function (){
 
 })
 
+
+document.getElementById('dot1').addEventListener('click', function(){	
+	const slideActive = slideElements[currentIndex]
+    slideActive.classList.remove('active')
+	currentIndex = 0
+	const firstSlide = slideElements[currentIndex]
+	firstSlide.classList.add('active')
+	
+})
+
+document.getElementById('dot2').addEventListener('click', function(){	
+	const slideActive = slideElements[currentIndex]
+    slideActive.classList.remove('active')
+	currentIndex = 1
+	const firstSlide = slideElements[currentIndex]
+	firstSlide.classList.add('active')
+	
+})
+
+document.getElementById('dot3').addEventListener('click', function(){	
+	const slideActive = slideElements[currentIndex]
+    slideActive.classList.remove('active')
+	currentIndex = 2
+	const firstSlide = slideElements[currentIndex]
+	firstSlide.classList.add('active')
+	
+})
+
+document.getElementById('dot4').addEventListener('click', function(){	
+	const slideActive = slideElements[currentIndex]
+    slideActive.classList.remove('active')
+	currentIndex = 3
+	const firstSlide = slideElements[currentIndex]
+	firstSlide.classList.add('active')
+	
+})
+
+document.getElementById('dot5').addEventListener('click', function(){	
+	const slideActive = slideElements[currentIndex]
+    slideActive.classList.remove('active')
+	currentIndex = 4
+	const firstSlide = slideElements[currentIndex]
+	firstSlide.classList.add('active')
+	
+})
 
